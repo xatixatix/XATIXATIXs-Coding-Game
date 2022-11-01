@@ -10,14 +10,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:xatixatixs-coding-game.helloWorld"
+    "onCommand:xatixatixs-coding-game.startCodingGame"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "xatixatixs-coding-game.helloWorld",
-        "title": "Hello World"
+        "command": "xatixatixs-coding-game.startCodingGame",
+        "title": "Start Coding Game"
       }
     ]
   },
