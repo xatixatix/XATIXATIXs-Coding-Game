@@ -1,26 +1,41 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "xatixatixs-coding-game" is now active!');
+	let startCodingGame = vscode.commands.registerCommand('xatixatixs-coding-game.startCodingGame', () => {
+		let panel = vscode.window.createWebviewPanel('XATIXATIXsCodingGame', 'XATIXATIXs Coding Game', vscode.ViewColumn.One, {
+			enableScripts: true,
+    		retainContextWhenHidden: true
+		});
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('xatixatixs-coding-game.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from XATIXATIX&#39;s Coding Game!');
+		const fs = require('fs');
+		console.log(fs);
+		//const htmlContent = fs.readFileSync('./webview/mainPage/mainpage.html', 'utf-8');
+
+		panel.webview.html = `
+		<!DOCTYPE html>
+<html>
+  	<head>
+  	<meta charset="utf-8" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<title>Main page</title>
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	<style>
+   	body {
+   		font-family: sans-serif;
+    	padding: 16px;
+   	}
+  	</style>
+ 	</head>
+    <body>
+  	    <h1>My Extension</h1>
+  	    <p>Welcome to my VS Code extension!</p>
+ 	</body>
+</html>
+		`;
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(startCodingGame);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}

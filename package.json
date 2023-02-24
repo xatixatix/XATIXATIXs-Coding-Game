@@ -10,14 +10,17 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:xatixatixs-coding-game.helloWorld"
+    "onCommand:xatixatixs-coding-game.startCodingGame"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "permissions": [
+      "webview"
+    ],
     "commands": [
       {
-        "command": "xatixatixs-coding-game.helloWorld",
-        "title": "Hello World"
+        "command": "xatixatixs-coding-game.startCodingGame",
+        "title": "Start Coding Game"
       }
     ]
   },
@@ -28,6 +31,9 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "fs": "0.0.1"
   },
   "devDependencies": {
     "@types/vscode": "^1.72.0",
