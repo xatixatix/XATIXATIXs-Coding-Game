@@ -10,7 +10,6 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:xatixatixs-coding-game.startCodingGame"
   ],
   "main": "./out/extension.js",
   "contributes": {
