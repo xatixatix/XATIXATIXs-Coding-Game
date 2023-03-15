@@ -2,7 +2,7 @@
   "name": "pythonFelkszites",
   "displayName": "Python érettségi felkészítő feladatok és tananyagok",
   "description": "Python érettségi felkészítés és feladatok. Akár 3 nap alatt felkészülhetsz a érettségi programozásos feladatára!",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "xatixatix",
   "engines": {
     "vscode": "^1.76.0"

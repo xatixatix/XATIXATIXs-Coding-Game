@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 			  }
 			);
 
-			const htmlPath = vscode.Uri.file(path.join(context.extensionPath, '/src/webview/index.html'));
+			const htmlPath = vscode.Uri.file(path.join(context.extensionPath, '/media/webview/index.html'));
 			const htmlContent = fs.readFileSync(htmlPath.fsPath, 'utf8');
 			webviewPanel.webview.html = htmlContent;
 			webviewPanel.reveal();
@@ -39,17 +39,17 @@ export function activate(context: vscode.ExtensionContext) {
 				
 				switch (lessonName){
 					case 'variableLesson': 
-						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/src/content/learn/valtozok.ipynb'));
+						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/valtozok.ipynb'));
 						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
 						vscode.window.showNotebookDocument(notebookFile);
 						return;
 					case 'cyclesLesson':
-						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/src/content/learn/ciklusok.ipynb'));
+						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/ciklusok.ipynb'));
 						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
 						vscode.window.showNotebookDocument(notebookFile);
 						return;
 					case 'ioLesson':
-						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/src/content/learn/inputoutput.ipynb'));
+						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/inputoutput.ipynb'));
 						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
 						vscode.window.showNotebookDocument(notebookFile);
 						return;
