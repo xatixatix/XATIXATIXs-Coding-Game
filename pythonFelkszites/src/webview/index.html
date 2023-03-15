@@ -1,0 +1,94 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1, h2, h3, p, button{
+                text-align: center;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 28vw;
+                height: 300px;
+                border: 2px solid black;
+                margin: 1.5em 0.5em 1.5em 0.5em;
+                align-items: center;
+            }
+
+            button {
+                max-width: 200px;
+            }
+
+        </style>
+        <title>Python érettségi felkészítő</title>
+    </head>
+    <body>
+
+        <h1>Python érettségi felkészítő</h1>
+        <h2>Tananyagok</h2>
+
+        <div class="container">
+            <div class="box">
+                <h3>Változók</h3>
+                <p>
+                    <a href="https://youtu.be/Qk9dvwksjks">Youtube videó</a>
+                </p>
+                <button id="variable-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <h3>Ciklusok</h3>
+                <p>
+                    <a href="https://youtu.be/Qk9dvwksjks">Youtube videó</a>
+                </p>
+                <button id="cyclesLesson-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <h3>Bemenet és kimenet használata</h3>
+                <p>
+                    <a href="https://youtu.be/Qk9dvwksjks">Youtube videó</a>
+                </p>
+                <button id="ioLesson-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <script>
+            const variableButton = document.getElementById('variable-button');
+            const cyclesButton = document.getElementById('cyclesLesson-button');
+            const ioButton = document.getElementById('ioLesson-button');
+
+            const vscode = acquireVsCodeApi();
+
+            variableButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openVariablesLesson'
+                });
+            });
+
+            cyclesButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openCyclesLesson'
+                });
+            });
+
+            ioButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openioLesson'
+                });
+            });
+        </script>
+    </body>
+</html>

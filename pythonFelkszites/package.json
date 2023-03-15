@@ -11,14 +11,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:pythonFelkszites.helloWorld"
+
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "pythonFelkszites.helloWorld",
-        "title": "Hello World"
+        "command": "pythonFelkszites.StartToLearnPython",
+        "title": "Start to learn python"
       }
     ]
   },
