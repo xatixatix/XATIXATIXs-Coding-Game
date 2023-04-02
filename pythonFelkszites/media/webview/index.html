@@ -4,15 +4,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+
+            body{
+                background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,147,253,1) 100%);
+            }
             h1, h2, h3, p, button{
                 text-align: center;
                 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: black;
+            }
+
+            h1 {
+                padding-top: 1em;
+                font-size: 35px;
+            }
+
+            h2{
+                font-size: 30px;
             }
 
             .container {
                 display: flex;
                 flex-wrap: wrap;
                 padding: 1em;
+                justify-content: center;
             }
 
             .box {
@@ -20,14 +36,40 @@
                 justify-content: center;
                 flex-direction: column;
                 width: 28vw;
-                height: 300px;
-                border: 2px solid black;
+                height: 320px;
                 margin: 1.5em 0.5em 1.5em 0.5em;
                 align-items: center;
+                position: relative;
+                border-radius: 2%;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
 
             button {
                 max-width: 200px;
+                margin-bottom: 2em;
+                border-radius: 8px;
+                padding: 0.5em;
+                background-color: rgba(240, 248, 255, 0);
+                cursor: pointer;
+                border: 3px solid black;
+                font-size: 16px;
+            }
+
+            .index{
+                position: absolute;
+                left: 15px;
+                top: 0;
+                font-size: large;
+            }
+
+            .box-title{
+                font-size: 22px;
+                padding-top: 5px;
+            }
+
+            hr {
+                border-color: black;
+                width: 80vw;
             }
 
         </style>
@@ -40,35 +82,118 @@
 
         <div class="container">
             <div class="box">
-                <h3>Változók</h3>
+                <p class="index">1</p>
+                <h3 class="box-title">Változók</h3>
                 <p>
                     <a href="https://youtu.be/6JFeyZUfYfY"><img src="https://i.imgur.com/IkkRAUl.png" style="width:250px;height:150px;"></a>
                 </p>
                 <button id="variable-button">Interaktív tananyag megnyitása</button>
             </div>
             <div class="box">
-                <h3>Ciklusok</h3>
+                <p class="index">2</p>
+                <h3 class="box-title">Ciklusok</h3>
                 <p>
                     <a href="https://youtu.be/nfRLIPckUZ4"><img src="https://i.imgur.com/36x5SPi.png" style="width:250px;height:150px;"></a>
                 </p>
                 <button id="cyclesLesson-button">Interaktív tananyag megnyitása</button>
             </div>
             <div class="box">
-                <h3>Bemenet és kimenet használata</h3>
+                <p class="index">3</p>
+                <h3 class="box-title">Bemenet és kimenet használata</h3>
                 <p>
-                    <a href="https://youtu.be/Qk9dvwksjks">Youtube videó</a>
+                    <a href="https://youtu.be/">Youtube videó</a>
                 </p>
                 <button id="ioLesson-button">Interaktív tananyag megnyitása</button>
             </div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box">
+                <p class="index">4</p>
+                <h3 class="box-title">Fájl beolvasása és módosítása</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="filekezeles-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">5</p>
+                <h3 class="box-title">Elágazások és feltételek</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="elagazasok-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">6</p>
+                <h3 class="box-title">Fontos függvények</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="fontosfuggvenyek-button">Interaktív tananyag megnyitása</button>
+            </div>
+        </div>
+
+
+        <br><br><br><br>
+        <hr>
+        <h2>Feladatok</h2>
+
+        <div class="container">
+            <div class="box">
+                <p class="index">1</p>
+                <h3 class="box-title">Változók</h3>
+                <p>
+                    <a href="https://youtu.be/6JFeyZUfYfY"><img src="https://i.imgur.com/IkkRAUl.png" style="width:250px;height:150px;"></a>
+                </p>
+                <button id="variable-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">2</p>
+                <h3 class="box-title">Ciklusok</h3>
+                <p>
+                    <a href="https://youtu.be/nfRLIPckUZ4"><img src="https://i.imgur.com/36x5SPi.png" style="width:250px;height:150px;"></a>
+                </p>
+                <button id="cyclesLesson-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">3</p>
+                <h3 class="box-title">Bemenet és kimenet használata</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="ioLesson-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">4</p>
+                <h3 class="box-title">Fájl beolvasása és módosítása</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="filekezeles-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">5</p>
+                <h3 class="box-title">Elágazások és feltételek</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="elagazasok-button">Interaktív tananyag megnyitása</button>
+            </div>
+            <div class="box">
+                <p class="index">6</p>
+                <h3 class="box-title">Fontos függvények</h3>
+                <p>
+                    <a href="https://youtu.be/">Youtube videó</a>
+                </p>
+                <button id="fontosfuggvenyek-button">Interaktív tananyag megnyitása</button>
+            </div>
         </div>
 
         <script>
             const variableButton = document.getElementById('variable-button');
             const cyclesButton = document.getElementById('cyclesLesson-button');
             const ioButton = document.getElementById('ioLesson-button');
+            const filekezelesButton = document.getElementById('filekezeles-button');
+            const elagazasokButton = document.getElementById('elagazasok-button');
+            const fontosfuggvenyekButton = document.getElementById('fontosfuggvenyek-button');
 
             const vscode = acquireVsCodeApi();
 
@@ -87,6 +212,24 @@
             ioButton.addEventListener('click', () => {
                 vscode.postMessage({
                 command: 'openioLesson'
+                });
+            });
+
+            filekezelesButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openFileLesson'
+                });
+            });
+
+            elagazasokButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openElagazasokLesson'
+                });
+            });
+
+            fontosfuggvenyekButton.addEventListener('click', () => {
+                vscode.postMessage({
+                command: 'openFuggvenyekLesson'
                 });
             });
         </script>

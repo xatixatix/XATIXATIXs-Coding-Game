@@ -17,13 +17,19 @@ export function activate(context: vscode.ExtensionContext) {
 			webviewPanel.webview.onDidReceiveMessage(message => {
 				switch (message.command){
 					case 'openVariablesLesson':
-						openVariablesLesson('variableLesson');
+						openLesson('variableLesson');
 						return;
 					case 'openCyclesLesson':
-						openVariablesLesson('cyclesLesson');
+						openLesson('cyclesLesson');
 						return;
 					case 'openioLesson':
-						openVariablesLesson('ioLesson');
+						openLesson('ioLesson');
+						return;
+					case 'openFileLesson':
+						openLesson('fileLesson');
+						return;
+					case 'openElagazasokLesson':
+						openLesson('elagazasokLesson');
 						return;
 				}
 			  }
@@ -34,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 			webviewPanel.webview.html = htmlContent;
 			webviewPanel.reveal();
 
-			async function openVariablesLesson(lessonName: string) {
+			async function openLesson(lessonName: string) {
 				let variableLessonPath, notebookFile;
 				
 				switch (lessonName){
@@ -50,6 +56,16 @@ export function activate(context: vscode.ExtensionContext) {
 						return;
 					case 'ioLesson':
 						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/inputoutput.ipynb'));
+						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
+						vscode.window.showNotebookDocument(notebookFile);
+						return;
+					case 'fileLesson':
+						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/fajlkezeles.ipynb'));
+						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
+						vscode.window.showNotebookDocument(notebookFile);
+						return;
+					case 'elagazasokLesson':
+						variableLessonPath = vscode.Uri.file(path.join(context.extensionPath, '/media/content/learn/elagazasok.ipynb'));
 						notebookFile = await vscode.workspace.openNotebookDocument(variableLessonPath);
 						vscode.window.showNotebookDocument(notebookFile);
 						return;
